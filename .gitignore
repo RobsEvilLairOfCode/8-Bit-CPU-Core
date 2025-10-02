@@ -1,0 +1,41 @@
+# Ignore build outputs
+*.out
+*.o
+*.exe
+*.vcd
+*.vvp
+*.sh
+
+# Ignore simulation results
+waveform_cropped.pdf
+*.fst
+
+# Ignore editor/OS clutter
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore LaTeX build files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.synctex.gz
+*.fdb_latexmk
+
+# Ignore Verilator build directory
+obj_dir/
+.vscode/
+Surelog/
+yosys/
+UHDM/
+
