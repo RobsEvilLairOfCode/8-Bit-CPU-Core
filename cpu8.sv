@@ -1,7 +1,10 @@
+`timescale 1ns/1ps
+
 module cpu8(
     input clk,
     input rst,
     input service_mode,
+    input register_rst,
     input [7:0] program_memory_data_in,
     input [7:0] program_memory_address,
     input program_memory_rst,
@@ -106,7 +109,7 @@ register_file_read_write_logic register_file_RW_logic(
 
 register_file_8 register_file(
     .clk(clk),
-    .rst(rst),
+    .rst(register_rst),
     .write_enable(register_file_write_enable),
     .write_select(register_file_write_select),
     .read_select_1(register_file_read_select_1),
@@ -143,7 +146,7 @@ always_comb begin
 end
 
 //ALU
-alu_8 alu(
+alu_8 #(.WIDTH(8)) alu(
     .A(register_file_data_out_1),
     .B(alu_B_input),
     .OP(alu_opcode),

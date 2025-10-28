@@ -8,6 +8,15 @@ module register_array_8(
     genvar i;
     generate
         for (i = 0; i < 8; i = i + 1) begin
+            if (i == 0) begin : gen_register
+                register_module register(
+                .clk(clk),
+                .rst(rst),
+                .write_enable(write_enable[i]),
+                .data_in(8'b0),
+                .data_out(data_out[i])
+            );
+            end else begin : gen_register
             register_module register(
                 .clk(clk),
                 .rst(rst),
@@ -15,8 +24,7 @@ module register_array_8(
                 .data_in(data_in),
                 .data_out(data_out[i])
             );
+            end
         end
     endgenerate
-
-    assign data_out[0] = 8'b0;
 endmodule

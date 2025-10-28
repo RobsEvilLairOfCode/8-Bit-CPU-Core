@@ -1,3 +1,4 @@
+//Note: This is not synthesizable as BRAM due to the single-cycle reset.
 module memory_array_256x8(
     input clk,
     input rst,

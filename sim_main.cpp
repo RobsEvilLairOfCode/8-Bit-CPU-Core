@@ -35,7 +35,7 @@ enum Opcode {
 // ---------------------
 // Instruction encoders
 // ---------------------
-int makeNOP() { return 0xFF; } // all-ones stall
+int makeNOP() { return 0x00; } // all-zeros stall
 
 int makeALUOP(Opcode opcode, int rd, int ra, int rb) {
     return (opcode << 4) | ((rd & 0b1) << 3) | ((ra & 0b1) << 2) | (rb & 0b11);
@@ -213,8 +213,7 @@ int main(int argc, char** argv) {
         //Move to Register 1
         "MOV1 1",
         "MOV2 2",//Move the 1 from register 2 to register 1
-        "LSL 0 1 3",//Shift it 3 (from register 3) times so that it becomes 8 (We will find up to the 8th number if the fib sequence), which is stored in reg 3
-        //At this point Reg 1 = 1, Reg 2 = 1, Reg 3 = 8
+        "LSL 0 1 3",//Shift it 3 (from register 3) times so that it becomes 8 (We will find up to the 10th number if the fib sequence, doesnt count first two), which is stored in reg 3
         "MOV1 4",
         "MOV2 2",//Move that value to register 4
 

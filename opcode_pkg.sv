@@ -1,5 +1,5 @@
+`timescale 1ns/1ps
 package opcode_pkg;
-
     typedef enum logic [3:0] {
         OPCODE_ADD  = 4'b0000,
         OPCODE_ADDI = 4'b0001,
@@ -17,7 +17,6 @@ package opcode_pkg;
         OPCODE_BR   = 4'b1101,
         OPCODE_MOV1   = 4'b1110,
         OPCODE_MOV2   = 4'b1111
-        // ... more opcodes
     } opcode_t;
 
 endpackage

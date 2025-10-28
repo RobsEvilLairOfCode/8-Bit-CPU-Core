@@ -2,10 +2,12 @@
 ./alu_8.sv
 ./alu_opcode_logic.sv
 ./branch_logic.sv
+./comparator_8.sv
 ./comparator_concatination.sv
 ./compare_flag_register_enable_logic.sv
 ./cpu8.sv
 ./cpu_memory_write_enable_logic.sv
+./decoder_3.sv
 ./memory_array_256x8.sv
 ./mov_logic.sv
 ./mov_logic_register_module.sv
