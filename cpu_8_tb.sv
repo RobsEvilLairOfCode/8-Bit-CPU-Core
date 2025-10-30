@@ -200,7 +200,7 @@ task automatic simulate(
     input instruction_stack_t instruction_stack,
     inout cpu_instance_t cpu_instance,
     input int timeout_cycles = 256,
-    input bit debug = 0;
+    input bit debug = 0
 );
     int i;
     int timer = 0;
