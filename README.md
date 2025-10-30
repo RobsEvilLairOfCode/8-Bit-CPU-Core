@@ -30,18 +30,18 @@ Please refer to CPU8_Report for instructions.
 
 ## Run Fibinocci sequence:
 
-<pre> ```bash
+```bash
 verilator --sv --build --cc -f filelist.f --exe sim_main.cpp --top-module cpu8 --trace
 
 ./obj_dir/Vcpu8
 
 gtkwave cpu8_trace.vcd
-``` <\pre>
+```
 
 ## Run CPU testbench:
 
-<pre> ```bash
+```bash
 verilator -Wall --sv   -Wno-PINCONNECTEMPTY   -Wno-EOFNEWLINE   -Wno-TIMESCALEMOD   -Wno-UNUSEDSIGNAL   --cc opcode_pkg.sv cpu8.sv cpu_8_tb.sv   --exe cpu_8_tb.cpp --build --trace --timing --top cpu_8_tb
 
 ./obj_dir/Vcpu_8_tb 
-``` <\pre>
+```
