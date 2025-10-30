@@ -6,29 +6,29 @@ to capture the core functionality of a general-purpose processor while operating
 small instruction size. A program designed to calculate the Fibonacci sequence is included
 to demonstrate the processor’s capabilities.
 
-##Key features:
+## Key features:
 * 8-bit datapath
 * Harvard architecture
 * Custom instruction set architecture
 * Fibonacci sequence demo via controller input
 * Procedural, self-checking testbench with scoreboard.
 
-##Documentation:
+## Documentation:
 Please refer to CPU8_Report for instructions.
 
-##Noteable files:
+## Noteable files:
 * CPU8_Report.pdf: Full report on CPU, including datapath diagram
 * cpu8.sv: The top file of the CPU
 * cpu8_tb.sv: Full testbench for the CPU
 * sim_main: Fibinocci assembly implementation
 * alu8_tb.sv Full testbench for the ALU
 
-##Requirements
+## Requirements
 * Linux / WSL2
 * Verilator
 * GTKWave (optional)
 
-##Run Fibinocci sequence:
+## Run Fibinocci sequence:
 
 <pre> ```bash
 verilator --sv --build --cc -f filelist.f --exe sim_main.cpp --top-module cpu8 --trace
@@ -38,7 +38,7 @@ verilator --sv --build --cc -f filelist.f --exe sim_main.cpp --top-module cpu8 -
 gtkwave cpu8_trace.vcd
 ''' <\pre>
 
-##Run CPU testbench:
+## Run CPU testbench:
 
 <pre> ```bash
 verilator --sv --cc -f filelist.f --exe sim_main.cpp --build --top-module cpu8 --trace
